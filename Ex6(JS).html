@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Таблица степеней двойки</title>
+<style>
+table, th, td {
+border: 1px solid black;
+border-collapse: collapse;
+}
+td:nth-child(1) {  
+text-align: center; 
+} 
+td:nth-child(2) { 
+text-align: right; 
+}
+th {
+padding: 0 10px;
+}
+</style>
+</head>
+<body>
+<h1>Таблица степеней двойки</h1>
+<script>
+document.write("<table>");
+document.write("<tr><th>Степень</th><th>Результат</th></tr>");
+for (let i = 0; i <= 5; i++) {
+let result = Math.pow(2, i);
+let degree = "2" + "<sup>" + i + "</sup>";
+document.write("<tr><td>" + degree + "</td><td>" + result + "</td></tr>");
+}
+document.write("</table>");
+</script>
+</body>
+</html>
