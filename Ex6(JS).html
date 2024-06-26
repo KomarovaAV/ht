@@ -2,32 +2,30 @@
 <head>
 <title>Таблица степеней двойки</title>
 <style>
-table, th, td {
-border: 1px solid black;
+table {
 border-collapse: collapse;
 }
-td:nth-child(1) {  
-text-align: center; 
-} 
-td:nth-child(2) { 
-text-align: right; 
-}
-th {
-padding: 0 10px;
+td, th {
+border: 1px solid black;
 }
 </style>
 </head>
 <body>
-<h1>Таблица степеней двойки</h1>
-<script>
-document.write("<table>");
-document.write("<tr><th>Степень</th><th>Результат</th></tr>");
-for (let i = 0; i <= 5; i++) {
-let result = Math.pow(2, i);
-let degree = "2" + "<sup>" + i + "</sup>";
-document.write("<tr><td>" + degree + "</td><td>" + result + "</td></tr>");
+<table>
+<tr>
+<td style="padding: 10px; text-align: center;">Степень</td>
+<td style="padding: 10px; text-align: center;">Результат</td>
+</tr>
+<script language="JavaScript" type="text/JavaScript">
+function row(pwr) {
+document.write("<tr>");
+document.write(`<td align="center">2<sup>${pwr}</sup></td>`)
+document.write(`<td align="right">${Math.pow(2, pwr)}</td>`)
+document.write("</tr>\n");
 }
-document.write("</table>");
+for (var i=0; i<=5; i++)
+row(i);
 </script>
+</table>
 </body>
 </html>
