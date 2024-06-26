@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Форма для заполнения данных</title>
+<script>
+function check() {
+var name = document.forms[0].name.value;
+var password = document.forms[0].password.value;
+var confirm_password = document.forms[0].confirm_password.value;
+var email = document.forms[0].email.value;
+var message = document.forms[0].message.value;
+if (name == "") {
+alert("Введите имя.");
+document.forms[0].name.focus();
+return false;
+} else if (password.length < 7) {
+alert("Пароль должен содержать более 6 символов");
+document.forms[0].password.focus();
+return false;
+} else if (password != confirm_password) {
+alert("Пароли не совпадают");
+document.forms[0].confirm_password.focus();
+return false;
+} else if (email.length == 0) {
+alert("Введите электронный адрес");
+document.forms[0].email.focus();
+return false;
+} else if (email.indexOf('@') == -1) {
+alert("Электронный адрес должен содержать символ '@'");
+document.forms[0].email.focus();
+return false;
+} else if (message.length < 17) {
+alert("Сообщение должно содержать более 16 символов");
+document.forms[0].message.focus();
+return false;
+}
+return true;
+}
+</script>
+</head>
+<body>
+<form style="line-height: 2;" onsubmit="return check()">
+Ваше имя: *<input type="text" name="name">
+<br>
+Пароль: *<input type="password" name="password">
+<br>
+Подтверждение пароля: *<input type="password" name="confirm_password">
+<br>
+Электронный адрес: *<input type="text" name="email">
+<br>
+Тема сообщения: <input type="text" name="theme">
+<br>
+Сообщение: <textarea name="message" wrap="off" style="width: 200px; height: 100px;"></textarea>
+<br>
+<input type="submit" value="Отправить">
+<input type="reset" value="Очистить">
+<br>
+* - необходимые для заполнения поля 
+</form>
+</body>
+</html>
