@@ -2,22 +2,18 @@
 <head>
 <title>Школьные предметы</title>
 <script language="JavaScript">
-function split() {
-let subjects = ["Математика", "Физика", "Информатика", "Химия", "Биология", "Русский язык", "Английский язык", "Литература", "История"];
-let endIn = 5;
-let sthumIn = endIn;
-let sciences = subjects.slice(0, endIn);
-let hum = subjects.slice(sthumIn);
-document.write("Все предметы: " + subjects.join(", ") + "<br>");
-document.write("Точные науки: " + sciences.join(", ") + "<br>");
-document.write("Гуманитарные науки: " + hum.join(", ") + "<br>");
+function writeSub(){
+var subjects = new Array("Физика", "Математика", "Информатика", "Химия", "Русский язык", "Литература", "История", "Английский язык");
+var sciences = subjects.slice(0, 4);
+var humanities = subjects.slice(4, 8);
+document.write(sciences.join(", ") + "<br>");
+document.write(humanities.join(", "));
 }
 </script>
 </head>
 <body>
-<h1>Школьные предметы по разделам:</h1>
 <script language="JavaScript">
-split();
+writeSub();
 </script>
 </body>
-</html>
+</html> 
