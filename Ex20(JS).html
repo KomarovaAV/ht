@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Слои</title>
+<style>
+.layer1{
+background-color: red;
+z-index: 3;
+position:relative;
+font-size:50px;
+width: 180px;
+height: 120px;
+top: 300px;
+left:700px;
+color: white;
+}
+.layer2{
+background-color: navy;
+z-index: 1;
+position:relative;
+font-size:50px;
+width: 200px;
+height: 120px;
+top: 200px;
+left: 600px;
+color: white;
+}
+.layer3{
+z-index: 2;
+position:relative;
+top: 0px;
+left: 0px;
+}
+</style>
+</head>
+<script>
+function moveImg(){
+var image = document.getElementById('moving_image');
+var left = parseInt(image.style.left) || 0;
+if (left < window.innerWidth){
+image.style.left = (left + 3) + 'px';
+setTimeout(moveImg, 20);
+}
+}
+</script>
+<body onload="moveImg()">
+<div class="layer1">
+Это ближе
+</div>
+<div class="layer2">
+Это дальше
+</div>
+<div id="moving_image" class="layer3">
+<img src="img3.gif">
+</div>
+</body>
+</html>
