@@ -1,18 +1,16 @@
 <html>
 <head>
-<title>Перенаправление</title>
-<script language="JavaScript">
-function redirect() {
-if (navigator.appName == "Microsoft Internet Explorer") {
-window.location.href = "Ex1(JS).html"; 
-} else {
-window.location.href = "Ex3(JS).html"; 
-}
-}
-window.onload = redirect; 
-</script>
+<title>Переадресация</title>
 </head>
 <body>
-<p>Перенаправляем...</p>
+<script language="JavaScript">
+var name = navigator.userAgent;
+if (name.indexOf("Edg") > -1) {
+window.location.href = "Ex1(JS).html";
+} 
+else {
+window.location.href = "Ex3(JS).html";
+}
+</script>
 </body>
 </html>
