@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>КулинарНирвана - Главная</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1><a href="index.html"><img src="logo.png">&nbsp; КулинарНирвана</a></h1>
+<nav>
+<ul>
+<li><a href="index.html">Главная</a></li>
+<li><a href="recipes.html">Рецепты</a></li>
+<li><a href="about.html">О нас</a></li>
+<li><a href="contacts.html">Контакты</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<div id="slider">
+<div class="slide">
+<img src="медовик.jpg" alt="Медовик">
+<h3>Медовик</h3>
+<p>Домашний медовый торт, медовик – классический рецепт и незабываемый вкус.</p>
+</div>
+<div class="slide">
+<img src="жульен.jpg" alt="Жульен">
+<h3>Жульен"</h3>
+<p>Жюльен или жульен (оба названия верные) — сложносочиненная горячая закуска, без которой не обходится меню ни одного приличного ресторана. Аппетитное и сытное блюдо в оригинальных кокотницах (название посуды) имеет интересный кулинарный состав.</p>
+</div>
+<div class="slide">
+<img src="салат с кальмарами.jpg" alt="Салат с кальмарами">
+<h3>Салат с кальмарами</h3>
+<p>Быстрый, сочный, очень нежный и очень вкусный салат с кальмарами, огурцом и яйцом.</p>
+</div>
+</div>
+<div id="categories">
+<h2>Популярные категории</h2>
+<ul>
+<li><a href="category-выпечка.html">Выпечка</a></li>
+<li><a href="category-салаты.html">Салаты</a></li>
+<li><a href="category-горячие блюда.html">Горячие блюда</a></li>
+</ul>
+</div>
+<div id="chef-advice">
+<h2>Совет шеф-повара</h2>
+<p>Помните, что кулинария - это искусство, поэтому не бойтесь экспериментировать и добавлять свои собственные идеи в рецепты!</p>
+</div>
+</main>
+<footer>
+<p>&copy; 2024 КулинарНирвана</p>
+</footer>
+<script>
+const slider = document.getElementById('slider');
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+function showSlide(n) {
+slides.forEach((slide, index) => {
+slide.style.opacity = index === n ? 1 : 0;
+});
+currentSlide = n;
+}
+function nextSlide() {
+showSlide((currentSlide + 1) % slides.length);
+}
+setInterval(nextSlide, 3000);
+</script>
+</body>
+</html>
