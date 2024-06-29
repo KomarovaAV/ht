@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>КулинарНирвана - Регистрация</title>
+<link rel="stylesheet" href="style.css"> 
+<script src="script.js"></script>
+</head>
+<body>
+<header>
+<h1><a href="index.html"><img src="logo.png">&nbsp; КулинарНирвана</a></h1>
+<nav>
+<ul>
+<li><a href="index.html">Главная</a></li>
+<li><a href="recipes.html">Рецепты</a></li>
+<li><a href="about.html">О нас</a></li>
+<li><a href="contacts.html">Контакты</a></li>
+<li><a href="registration.html">Регистрация</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<div id="registration-form">
+<h2>Регистрация</h2>
+<form id="register-form">
+<label for="username">Имя пользователя:</label><br>
+<input type="text" id="username" name="username" required>
+<span class="error" id="username-error"></span><br><br>
+<label for="email">Email:</label><br>
+<input type="email" id="email" name="email" required>
+<span class="error" id="email-error"></span><br><br>
+<label for="password">Пароль:</label><br>
+<input type="password" id="password" name="password" required>
+<span class="error" id="password-error"></span><br><br>
+<label for="confirm-password">Подтвердите пароль:</label><br>
+<input type="password" id="confirm-password" name="confirm-password" required>
+<span class="error" id="confirm-password-error"></span><br><br>
+<button type="submit">Зарегистрироваться</button>
+</form>
+</div>
+</main>
+<footer>
+<p>&copy; 2024 КулинарНирвана</p>
+</footer>
+</body>
+</html>

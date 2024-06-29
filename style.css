@@ -8,8 +8,8 @@ header {
     background-color: #333;
     color: #fff;
     padding: 10px;
-	 font-size: 1em;
-     line-height: 1; 
+	font-size: 1em;
+    line-height: 1; 
 }
 
 h1 {
@@ -49,6 +49,9 @@ main {
 }
 
 h2 {
+	background-color: #ffe9f4; 
+    padding: 20px;          
+    border-radius: 10px; 
     color: #333;
 }
 
@@ -128,31 +131,6 @@ h2 {
     text-align: center;
 }
 
-#search {
-    margin-top: 20px;
-    text-align: center;
-}
-
-#search form {
-    display: inline-block;
-}
-
-#search input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-#search button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
-}
-
 footer {
     background-color: #333;
     color: #fff;
@@ -183,6 +161,9 @@ footer {
 
 #contact-form {
     margin-top: 20px;
+	background-color: #ffe9f4; 
+    padding: 20px;          
+    border-radius: 10px; 
 }
 
 #contact-form h3 {
@@ -215,4 +196,46 @@ footer {
 
 #contact-form button:hover {
     background-color: #555;
+}
+#registration-form {
+    margin-top: 20px;
+    background-color: #ffe9f4; 
+    padding: 20px;          
+    border-radius: 10px; 
+}
+
+#registration-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#registration-form input,
+#registration-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+	border: dashed black;
+    box-sizing: border-box;
+}
+
+#registration-form button {
+    padding: 10px 20px;
+    border: dashed black;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#registration-form button:hover {
+    background-color: #555;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 5px;
 }
